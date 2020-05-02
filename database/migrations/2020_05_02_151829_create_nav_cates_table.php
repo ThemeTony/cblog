@@ -15,7 +15,10 @@ class CreateNavCatesTable extends Migration
     {
         Schema::create('nav_cates', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->char('name',100);
+            $table->char('icon',100)->nullable();
+            $table->char('link',200)->nullable();
+            $table->integer('sort')->default(0);
         });
     }
 

@@ -10,32 +10,8 @@
                         <a href="" title="TonyHe" class="header-logo" style="text-decoration:none;">MatrixCoder</a>
                         <p class="lead" style="margin-top: 0px;margin-left:5px">An Poor Programmer and Student</p>
                     </nav>
-                    <div class="index-cates ">
-                        <li class="cat-item cat-item-4 cat-real" style="display: inline-block;">
-                            <a href="" class="" title="1">
-                                <div class="header-item-icon-div">
-                                    <i class="ri-user-5-line"></i>
-                                </div>
-                                分类1
-                            </a>
-                        </li>
-                        <li class="cat-item cat-item-4 cat-real" style="display: inline-block;">
-                            <a href="" class="" title="2">
-                                <div class="header-item-icon-div">
-                                    <i class="ri-dvd-line"></i>
-                                </div>
-                                分类2
-                            </a>
-                        </li>
-                    </div>
-                    <ul class="post_tags">
-                        @foreach($tags as $tag)
-                        <li class="cat-real"><a href="{{route('tag',['id'=>$tag->id])}}" class="">#{{ $tag->name }}</a>
-                        </li>
-                        @endforeach
-
-                        <!---->
-                    </ul>
+                    @include('components.topInsideCate')
+                    @include('components.allTags')
                 </div>
                 @component('components.article_list',['articles'=>$articles])
                 @endcomponent

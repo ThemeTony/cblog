@@ -14,15 +14,24 @@
 {{--                                </a>--}}
             </div>
             <div class="header-div2">
-{{--                @foreach($navs as $nav)--}}
-{{--                <a href="{{$nav->link}}">--}}
-{{--                    <button type="button" class="btn btn-light">{{$nav->name}}</button>--}}
-{{--                </a>--}}
-{{--                @endforeach--}}
-
                 <div class="btn-group">
-                    <button class="btn btn-secondary" type="button">Split dropdown</button>
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu="" aria-expanded="false"></button>
+                    @foreach(\App\Nav::find(0)->allChildren as $item)
+                        @empty($item->allChildren[0])
+                                <a href="{{$item->link}}"><button class="btn btn-light" type="button">{{$item->name}}</button></a>
+                        @else
+                            <a href="{{$item->link}}" class="btn btn-primary">{{$item->name}}</a>
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu="" aria-expanded="false"></button>
+                            <div class="dropdown-menu" style="">
+                                @foreach($item->allChildren as $child_item)
+                                    @component('components.headerItem',['item'=>$child_item])
+                                    @endcomponent
+                                @endforeach
+                            </div>
+                        @endempty
+                    @endforeach
+
+
+
 
                     <div class="dropdown-menu" style="">
                         <div class="dropdown dropleft dropdown-submenu">
@@ -73,7 +82,7 @@
                         <button class="dropdown-item" type="button">Separated link</button>
 
                     </div>
-                </div>
+
             </div> <!----> <!---->
         </header>
 {{--            <div id="view-div" class="center-info" style="display: none;">--}}

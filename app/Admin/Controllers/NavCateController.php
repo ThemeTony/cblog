@@ -6,15 +6,16 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use App\NavCate;
 
-class ExampleController extends AdminController
+class NavCateController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'Example controller';
+    protected $title = '分类导航管理';
 
     /**
      * Make a grid builder.
@@ -23,11 +24,12 @@ class ExampleController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new ExampleModel);
-
-        $grid->column('id', __('ID'))->sortable();
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid = new Grid(new NavCate);
+        $grid->model()->orderBy('sort');
+        $grid->column('sort',__('排序'))->sortable();
+        $grid->column('name', __('名称'));
+        $grid->column('link', __('链接'));
+        $grid->column('id', __('ID'));
 
         return $grid;
     }
@@ -40,11 +42,13 @@ class ExampleController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(ExampleModel::findOrFail($id));
+        $show = new Show(NavCate::findOrFail($id));
 
         $show->field('id', __('ID'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
+        $show->field('name',__('名称'));
+        $show->field('link',__('链接'));
+        $show->field('icon',__('图标'));
+        $show->field('sort',__('排序'));
 
         return $show;
     }
@@ -56,11 +60,14 @@ class ExampleController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new ExampleModel);
+        $form = new Form(new NavCate);
 
         $form->display('id', __('ID'));
-        $form->display('created_at', __('Created At'));
-        $form->display('updated_at', __('Updated At'));
+        $form->text('name',__('名称'));
+        $form->url('link','链接');
+        $form->text('icon',__('图标'));
+        $form->number('sort',__('排序'));
+
 
         return $form;
     }

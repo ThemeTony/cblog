@@ -16,7 +16,7 @@ class UploadController extends Controller
             if ($file->isValid()){
                 $ext = $file->getClientOriginalExtension();
                 $realPath = $file->getRealPath();
-                $filename = date('Y-m-d-H-i-S') . '-' . uniqid() . '-' . $ext;
+                $filename = date('Y-m-d-H-i-S') . '-' . uniqid() . '.' . $ext;
                 $bool = Storage::disk('public')->put('article/'.$filename, file_get_contents($realPath));
                 if(!$bool) $message="Error";
                 else $url='/storage/article/'.$filename;

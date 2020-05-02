@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>@yield('title','Hello') - MatrixCoder's Blog</title>
+        <link href="/css/app.css" rel="stylesheet">
         <link href="http://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://cdn.staticfile.org/bootstrap-submenu/3.0.1/css/bootstrap-submenu.min.css" rel="stylesheet">
     </head>
     <body>
         <div id="loading" style="z-index: 999;background-color: #f6f7f8;height: 100%;width: 100%;position: fixed;margin-top: 0px;top: 0px;"></div>
@@ -53,7 +55,7 @@
             }
         </script>
         <div id="'main">
-            @include('components.nav')
+            @include('components.header')
             @section('main')@show
         </div>
         <script>
@@ -67,7 +69,7 @@
         @include('components.footer')
         <script src="http://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js"></script>
         <script src="http://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link href="/css/app.css" rel="stylesheet">
+        <script src="http://cdn.staticfile.org/bootstrap-submenu/3.0.1/js/bootstrap-submenu.min.js"></script>
         <script src="/js/app.js"></script>
     </body>
 </html>

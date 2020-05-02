@@ -1,4 +1,8 @@
-
+/*
+    name: 深色样式表
+    author: TonyHe
+    update: 16-2-2020
+*/
 
 .center-info {
     p {
@@ -54,6 +58,7 @@
 .list-show-btn {
     color: rgb(46, 62, 96) !important;
     background: #f6f7f8 !important;
+    opacity: 0.8 !important;
 }
 
 .article-list-item {
@@ -225,13 +230,31 @@
     color: #fff !important;
 }
 
-.article-content h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #fff !important;
+.article-content {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    ol,
+    ul,
+    span {
+        color: #fff !important;
+    }
+
+    span {
+        span {
+            color: #fff !important;
+        }
+    }
+
+    li::before {
+        color: #fff !important;
+    }
+
 }
 
 .warp-post-embed .embed-content h2 {
@@ -263,4 +286,20 @@ h6 {
 
 .page-p {
     color: #fff !important;
+}
+
+.gray-for-heroes {
+    background: #333 !important;
+
+    &:hover {
+        background: #333 !important;
+    }
+}
+
+.buy-list-item {
+    .buy-right-info {
+        h3{
+            color: #fff !important;
+        }
+    }
 }

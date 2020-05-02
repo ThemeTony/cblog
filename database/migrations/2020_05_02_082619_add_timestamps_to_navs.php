@@ -15,6 +15,7 @@ class AddTimestampsToNavs extends Migration
     {
         Schema::table('navs', function (Blueprint $table) {
             //
+            $table->timestamps();
         });
     }
 

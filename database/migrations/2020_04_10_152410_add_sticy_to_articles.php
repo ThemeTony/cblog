@@ -15,7 +15,7 @@ class AddSticyToArticles extends Migration
     {
         Schema::table('articles', function (Blueprint $table) {
             //
-            $table->smallInteger('kind')->default(0);
+            $table->boolean('sticky')->default(false);
         });
     }
 

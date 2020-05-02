@@ -24,7 +24,4 @@ class Cate extends Model
     {
         return $this->hasMany(Cate::class, 'parent_id');
     }
-    public function getAllChildrenAttribute(){
-        return Cate::where('path','like',$this->path.'%')->get();
-    }
 }

@@ -71,7 +71,7 @@
                         <!-- 文章顶部 -->
                         <div class="article-header">
                             <span class="badge badge-pill badge-danger single-badge">
-                                <a style="text-decoration:none">
+                                <a style="text-decoration:none;text-decoration-color: #1e87f0;color: #1e87f0">
                                   <i class="ri-article-line"></i>
                                   Blog Post
                                 </a>
