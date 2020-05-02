@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNavsTable extends Migration
+class CreateNavCatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateNavsTable extends Migration
      */
     public function up()
     {
-        Schema::create('navs', function (Blueprint $table) {
+        Schema::create('nav_cates', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->char('name',100);
-            $table->string('link',200);
-            $table->integer('index');
-            $table->bigInteger('parent_id')->default(0);
-            $table->foreign('parent_id')->references('id')->on('navs')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +26,6 @@ class CreateNavsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('navs');
+        Schema::dropIfExists('nav_cates');
     }
 }
