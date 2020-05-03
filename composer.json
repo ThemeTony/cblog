@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
-        "ext-json": "^1.7",
+        "ext-json": "*",
         "encore/laravel-admin": "^1.7",
         "erusev/parsedown": "^1.7",
         "fideloper/proxy": "^4.0",
@@ -22,7 +22,8 @@
         "laravel-admin-ext/simplemde": "^1.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0",
-        "sharemant/laravel-admin-ext-editormd": "^1.0"
+        "sharemant/laravel-admin-ext-editormd": "^1.0",
+        "spatie/laravel-pjax": "^2.1"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",

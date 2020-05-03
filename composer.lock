@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab196d296a44d6b1a746f5441bc585e4",
+    "content-hash": "5dfd392248c931f2ff19387cfed8f43d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1079,6 +1079,117 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
+            "name": "james.xue/laravel-admin-sortable",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xiaoxuan6/laravel-admin-sortable.git",
+                "reference": "d5578a052e6aeece453fb51ff840116656450f6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xiaoxuan6/laravel-admin-sortable/zipball/d5578a052e6aeece453fb51ff840116656450f6b",
+                "reference": "d5578a052e6aeece453fb51ff840116656450f6b",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "encore/laravel-admin": "~1.6",
+                "james.xue/laravel-sortable": "~1.1",
+                "laravel/framework": ">= 5.4",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Encore\\Sortable\\SortableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Encore\\Sortable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "xiaoxuan6",
+                    "email": "1527736751@qq.com"
+                }
+            ],
+            "description": "description...",
+            "homepage": "https://github.com/laravel-admin-ext/laravel-admin-sortable",
+            "keywords": [
+                "extension",
+                "laravel-admin",
+                "sortable"
+            ],
+            "time": "2019-06-04T05:19:29+00:00"
+        },
+        {
+            "name": "james.xue/laravel-sortable",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xiaoxuan6/laravel-sortable.git",
+                "reference": "ea9c388126d70693c10651501132a5172dc63906"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xiaoxuan6/laravel-sortable/zipball/ea9c388126d70693c10651501132a5172dc63906",
+                "reference": "ea9c388126d70693c10651501132a5172dc63906",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "James\\Sortable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "james.xue",
+                    "email": "1527736751@qq.com"
+                }
+            ],
+            "description": "Sortable behaviour for eloquent models",
+            "keywords": [
+                "behaviour",
+                "eloquent",
+                "laravel",
+                "model",
+                "sort",
+                "sortable"
+            ],
+            "time": "2019-07-12T08:42:07+00:00"
+        },
+        {
             "name": "james.xue/login-captcha",
             "version": "2.0.1",
             "source": {
@@ -1326,7 +1437,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel-admin-extensions/simplemde/zipball/49bd152e313b1442c569679d7f5bff6ab0edd80c",
                 "reference": "49bd152e313b1442c569679d7f5bff6ab0edd80c",
-                "shasum": "c6f0425e82d442f388f055d0129b89b9e211abd6",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -2689,7 +2800,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ShareManT/laravel-admin-ext-editormd/zipball/acb1f754f2aca0a80e0f3d9de68a3aa8db313825",
                 "reference": "acb1f754f2aca0a80e0f3d9de68a3aa8db313825",
-                "shasum": "ad7f04b8ef2962d88c6b1c923af617998c0dce96",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -2733,6 +2844,69 @@
                 "laravel-admin"
             ],
             "time": "2019-02-06T14:24:39+00:00"
+        },
+        {
+            "name": "spatie/laravel-pjax",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-pjax.git",
+                "reference": "6a7f4fd5bf72b1d02a7527493f81d82bcc68fe21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-pjax/zipball/6a7f4fd5bf72b1d02a7527493f81d82bcc68fe21",
+                "reference": "6a7f4fd5bf72b1d02a7527493f81d82bcc68fe21",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0",
+                "illuminate/support": "^6.0|^7.0",
+                "php": "^7.2",
+                "symfony/css-selector": "^4.0|^5.0",
+                "symfony/dom-crawler": "^4.0|^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Pjax\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A pjax middleware for Laravel 5",
+            "homepage": "https://github.com/spatie/laravel-pjax",
+            "keywords": [
+                "laravel-pjax",
+                "pjax",
+                "spatie"
+            ],
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-03-09T22:17:05+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7394,7 +7568,8 @@
     "prefer-lowest": false,
     "platform": {
         "php": "^7.2",
-        "ext-json": "^1.7"
+        "ext-json": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

@@ -15,11 +15,11 @@
             </div>
             <div class="header-div2">
                 <div class="btn-group">
-                    @foreach(\App\Nav::find(0)->allChildren as $item)
+                    @foreach(\App\Nav::where('parent_id',0)->orderBy('sort')->with('allChildren')->get() as $item)
                         @empty($item->allChildren[0])
                                 <a href="{{$item->link}}"><button class="btn btn-light" type="button">{{$item->name}}</button></a>
                         @else
-                            <a href="{{$item->link}}" class="btn btn-primary">{{$item->name}}</a>
+                            <a href="{{$item->link}}" class="btn btn-primary" style="border-top-left-radius: .25em;border-bottom-left-radius: .25em;">{{$item->name}}</a>
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu="" aria-expanded="false"></button>
                             <div class="dropdown-menu" style="">
                                 @foreach($item->allChildren as $child_item)

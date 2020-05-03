@@ -6,6 +6,7 @@
         <link href="/css/app.css" rel="stylesheet">
         <link href="http://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://cdn.staticfile.org/bootstrap-submenu/3.0.1/css/bootstrap-submenu.min.css" rel="stylesheet">
+        <link href="http://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
     </head>
     <body>
         <div id="loading" style="z-index: 999;background-color: #f6f7f8;height: 100%;width: 100%;position: fixed;margin-top: 0px;top: 0px;"></div>
@@ -54,22 +55,29 @@
                     document.cookie= name + "="+cval+";expires="+exp.toGMTString();
             }
         </script>
-        <div id="'main">
-            @include('components.header')
+        @include('components.header')
+        <div id="main">
             @section('main')@show
         </div>
+        @include('components.footer')
+        <script src="http://cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+        <script src="http://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js"></script>
         <script>
-            if(getCookie('read-cookie-notice'))
-                $('#cookie-notice').hide()
-            $('#cookie-notice').click(function(){
-                $(this).hide(500);
-                setCookie('read-cookie-notice','1','0s','/');
+            $(document).pjax('a', '#main');
+            $(document).on('pjax:start', function() { NProgress.start(); });
+            $(document).on('pjax:end',   function() { NProgress.done();  });
+        </script>
+        <script src="http://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script>
+            $.getScript('http://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js',function () {
+                NProgress.set(0.5)
             })
         </script>
-        @include('components.footer')
-        <script src="http://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js"></script>
-        <script src="http://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="http://cdn.staticfile.org/bootstrap-submenu/3.0.1/js/bootstrap-submenu.min.js"></script>
-        <script src="/js/app.js"></script>
+        <script>
+            $.getScript('/js/app.js',function () {
+                NProgress.set(1.0)
+            })
+        </script>
     </body>
 </html>

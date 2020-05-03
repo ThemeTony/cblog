@@ -101,9 +101,6 @@
                                 <span class="article-list-minutes">{{ $article->views }}&nbsp;Views</span>
                                 <span class="article-list-divider">/</span>
                                 <span class="article-list-minutes">About {{ mb_strlen(strip_tags($article->rendered),'utf-8') }}&nbsp;Words</span>
-{{--                                <span--}}
-{{--                                    class="article-list-minutes"--}}
-{{--                                >{{ $article.words }}&nbsp;Words</span>--}}
                             </div>
                             <!-- 底部信息 -->
 
@@ -160,12 +157,12 @@
     </div>
     <script type="text/javascript">
         function Onload() {
-            var element = document.createElement("script");
-            element.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
-            document.body.appendChild(element);
-            element.onload = function () {
+            $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML',function () {
+                MathJax.Hub.Config({tex2Jax:{inlineMath:[['$','$'],['\\C','\\)']]}})
+                var article_content = $('.article-content')[0];
+                MathJax.Hub.Queue(['Typeset',MathJax.Hub,article_content]);
                 $("#loading_math").slideUp(1500);
-            }
+            })
 
             var element = document.createElement("script");
             element.src = "/js/prism.js";
@@ -352,5 +349,8 @@
             }
             /* 文章目录 */
         }
+        @if(request()->header('X-PJAX'))
+            Onload()
+        @endif
     </script>
 @endsection

@@ -17,19 +17,26 @@
                             <div class="single-line"></div>
                         </header>
                         <div class="article-content">{!! $page->rendered !!}</div>
-                        <!-- 评论 -->
-                        <div id="vcomments"></div>
-                        <!-- 评论 -->
                     </div>
+                </article>
+                <article class="article reveal"><!-- 文章评论 -->
+                    <div id="vcomments">
+                        <span aria-hidden="true" class="spinner-grow text-secondary"><!----></span>
+                        评论系统加载中
+                    </div>
+                    <!-- 文章评论 -->
                 </article>
             </div>
         </div>
     </div>
     <script type="text/javascript">
         function Onload() {
-            var element = document.createElement("script");
-            element.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
-            document.body.appendChild(element);
+            $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML',function () {
+                MathJax.Hub.Config({tex2Jax:{inlineMath:[['$','$'],['\\C','\\)']]}})
+                var article_content = $('.article-content')[0];
+                MathJax.Hub.Queue(['Typeset',MathJax.Hub,article_content]);
+                $("#loading_math").slideUp(1500);
+            })
 
             var element = document.createElement("script");
             element.src = "/js/prism.js";
@@ -53,5 +60,8 @@
             window.attachEvent("onload", Onload);
         else
             window.onload = Onload;
+        @if(request()->header('X-PJAX'))
+            Onload()
+        @endif
     </script>
 @endsection

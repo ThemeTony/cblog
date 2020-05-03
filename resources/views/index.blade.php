@@ -18,4 +18,12 @@
             </div>
         </div>
     </div>
+    <script>
+        if(getCookie('read-cookie-notice'))
+            $('#cookie-notice').hide()
+        $('#cookie-notice').click(function(){
+            $(this).hide(500);
+            setCookie('read-cookie-notice','1','0s','/');
+        })
+    </script>
 @endsection

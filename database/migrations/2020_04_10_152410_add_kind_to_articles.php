@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddSticyToArticles extends Migration
+class AddKindToArticles extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class AddSticyToArticles extends Migration
     {
         Schema::table('articles', function (Blueprint $table) {
             //
-            $table->boolean('sticky')->default(false);
+            $table->smallInteger('kind')->default(0);
         });
     }
 
