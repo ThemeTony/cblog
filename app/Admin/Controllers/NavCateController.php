@@ -26,7 +26,7 @@ class NavCateController extends AdminController
     {
         $grid = new Grid(new NavCate);
         $grid->model()->orderBy('sort');
-        $grid->column('sort',__('排序'))->sortable();
+        $grid->sort('排序')->sortableColumn(NavCate::class);
         $grid->column('name', __('名称'));
         $grid->column('link', __('链接'));
         $grid->column('id', __('ID'));
@@ -66,7 +66,6 @@ class NavCateController extends AdminController
         $form->text('name',__('名称'));
         $form->url('link','链接');
         $form->text('icon',__('图标'));
-        $form->number('sort',__('排序'));
 
 
         return $form;

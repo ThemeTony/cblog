@@ -4681,7 +4681,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/edd69c5e0508972c81f1f7173236de2459c45814",
                 "reference": "edd69c5e0508972c81f1f7173236de2459c45814",
-                "shasum": "22f7ee0919ce5d5a48b11d5e4bbc1777a86cc62e",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -4757,7 +4757,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/barryvdh/ReflectionDocBlock/zipball/6b69015d83d3daf9004a71a89f26e27d27ef6a16",
                 "reference": "6b69015d83d3daf9004a71a89f26e27d27ef6a16",
-                "shasum": "9b4b5cbf4c12656bbede87767295350eb9b8a652",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -4811,7 +4811,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
                 "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
-                "shasum": "8427893916d41ae245cf84e90771151f1342da50",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -4872,7 +4872,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/composer/composer/zipball/b912a45da3e2b22f5cb5a23e441b697a295ba011",
                 "reference": "b912a45da3e2b22f5cb5a23e441b697a295ba011",
-                "shasum": "21ed207e944efa30f6758eedea0cf4f7deed1e7e",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -4957,7 +4957,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/composer/semver/zipball/c6bea70230ef4dd483e6bbcab6005f682ed3a8de",
                 "reference": "c6bea70230ef4dd483e6bbcab6005f682ed3a8de",
-                "shasum": "e3f7d2e007c2b54dccc077b04c32f0285ac9323e",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -5023,7 +5023,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/0c3e51e1880ca149682332770e25977c70cf9dae",
                 "reference": "0c3e51e1880ca149682332770e25977c70cf9dae",
-                "shasum": "bd7085a92a6a1d0ccf5cf60d6df11158abf342b2",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -5088,7 +5088,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/1ab9842d69e64fb3a01be6b656501032d1b78cb7",
                 "reference": "1ab9842d69e64fb3a01be6b656501032d1b78cb7",
-                "shasum": "9d4bbf92f52bb07bc5190a121239071cdc963bfb",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -5563,7 +5563,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/44c6787311242a979fa15c704327c20e7221a0e4",
                 "reference": "44c6787311242a979fa15c704327c20e7221a0e4",
-                "shasum": "2f86c4770689a815b376622ff825052c771bd947",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -7314,7 +7314,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/e2e5d290e4d2a4f0eb449f510071392e00e10d19",
                 "reference": "e2e5d290e4d2a4f0eb449f510071392e00e10d19",
-                "shasum": "185a7ece87def0a4d4d1ff298f70d4ff1133c297",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -7368,7 +7368,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/8800503d56b9867d43d9c303b9cbcc26016e82f0",
                 "reference": "8800503d56b9867d43d9c303b9cbcc26016e82f0",
-                "shasum": "0945cb4986cef2914574f2b554ad336e7be4188d",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -7417,7 +7417,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/filesystem/zipball/ca3b87dd09fff9b771731637f5379965fbfab420",
                 "reference": "ca3b87dd09fff9b771731637f5379965fbfab420",
-                "shasum": "796ceb7b833e213537a947afaa3875fcc9a6791f",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",

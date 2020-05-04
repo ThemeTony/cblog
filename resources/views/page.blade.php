@@ -31,7 +31,7 @@
     </div>
     <script type="text/javascript">
         function Onload() {
-            $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML',function () {
+            $.getScript('http://cdn.staticfile.org/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML',function () {
                 MathJax.Hub.Config({tex2Jax:{inlineMath:[['$','$'],['\\C','\\)']]}})
                 var article_content = $('.article-content')[0];
                 MathJax.Hub.Queue(['Typeset',MathJax.Hub,article_content]);

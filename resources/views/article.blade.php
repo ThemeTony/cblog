@@ -22,31 +22,31 @@
                     </div>
                     <div>
                         @if($prev_article)
-                        <div
-                            class="index-div-next"
+                            <div
+                                class="index-div-next"
 
-                        >
-                            <h4>
-                                <i class="czs-hande-vertical"></i>
-                                Previous
-                            </h4>
-                            <p>
-                                <a href="{{route('article',['id'=>$prev_article->id])}}">{{ $prev_article->title }}</a>
-                            </p>
-                        </div>
+                            >
+                                <h4>
+                                    <i class="czs-hande-vertical"></i>
+                                    Previous
+                                </h4>
+                                <p>
+                                    <a href="{{route('article',['id'=>$prev_article->id])}}">{{ $prev_article->title }}</a>
+                                </p>
+                            </div>
                         @endif
                         @if($next_article)
-                        <div
-                            class="index-div-next"
-                        >
-                            <h4>
-                                <i class="czs-hand-horizontal"></i>
-                                Next
-                            </h4>
-                            <p>
-                                <a href="{{route('article',['id'=>$next_article->id])}}">{{ $next_article->title }}</a>
-                            </p>
-                        </div>
+                            <div
+                                class="index-div-next"
+                            >
+                                <h4>
+                                    <i class="czs-hand-horizontal"></i>
+                                    Next
+                                </h4>
+                                <p>
+                                    <a href="{{route('article',['id'=>$next_article->id])}}">{{ $next_article->title }}</a>
+                                </p>
+                            </div>
                         @endif
                         <div
                             class="index-div-next single-donate"
@@ -76,27 +76,34 @@
                                   Blog Post
                                 </a>
                             </span>
-                            <span class="badge badge-pill badge-danger single-badge" style="margin-left: 10px;">
-                                <a
-                                    class="post-header"
-                                    href="{{route('cate',['id'=>$article->cate->id])}}"
-                                >{{ $article->cate->name }}</a>
-                            </span>
-{{--                            {#                            <span#}--}}
-{{--                            {#                                    class="badge badge-pill badge-danger single-badge"#}--}}
-{{--                            {#                                    style="margin-left: 10px;"#}--}}
-{{--                            {#                            >#}--}}
-{{--                            {#                                <a#}--}}
-{{--                            {#                                        class="post-header"#}--}}
-{{--                            {#                                >阅读时长</a>#}--}}
-{{--                            {#                            </span>#}--}}
+                            @if($article->cate)
+                                <span class="badge badge-pill badge-danger single-badge" style="margin-left: 10px;">
+                                    <a
+                                        class="post-header"
+                                        href="{{route('cate',['id'=>$article->cate->id])}}"
+                                        style="text-decoration-line: none"
+                                    >{{ $article->cate->name }}</a>
+                                </span>
+                            @else
+                                <span class="badge badge-pill badge-danger single-badge" style="margin-left: 10px;">
+                                    <a
+                                        class="post-header"
+                                        style="text-decoration-line: none"
+                                    >无分类</a>
+                                </span>
+                            @endif
+{{--                            <span--}}
+{{--                                class="badge badge-pill badge-danger single-badge" style="margin-left: 10px;">--}}
+{{--                                <a class="post-header">阅读时长</a>--}}
+{{--                            </span>--}}
                             <!-- 文章标题 -->
                             <h2 class="single-h2">{{ $article->title }}</h2>
                             <!-- 文章标题 -->
 
                             <!-- 底部信息 -->
                             <div class="article-list-footer">
-                                <span class="article-list-date" data-toggle="tooltip" title="created time:{{ $article->created_at }}  |  updated time:{{ $article->updated_at }}">{{ $article->created_at->diffForHumans() }}</span>
+                                <span class="article-list-date" data-toggle="tooltip"
+                                      title="created time:{{ $article->created_at }}  |  updated time:{{ $article->updated_at }}">{{ $article->created_at->diffForHumans() }}</span>
                                 <span class="article-list-divider">/</span>
                                 <span class="article-list-minutes">{{ $article->views }}&nbsp;Views</span>
                                 <span class="article-list-divider">/</span>
@@ -129,15 +136,15 @@
                                     ><i class="ri-price-tag-3-line"></i>Tags</a>
                                 </li>
                                 @foreach($article->tags as $tag)
-                                <li
-                                    class="cat-real"
-                                    style="display: inline-block;"
-                                >
-                                    <a
-                                        style="font-size: .9rem;border-radius: 4px;padding: 1px 12px 1px;"
-                                        href="{{route('tag',['id'=>$tag->id])}}"
-                                    >{{ $tag->name }}</a>
-                                </li>
+                                    <li
+                                        class="cat-real"
+                                        style="display: inline-block;"
+                                    >
+                                        <a
+                                            style="font-size: .9rem;border-radius: 4px;padding: 1px 12px 1px;"
+                                            href="{{route('tag',['id'=>$tag->id])}}"
+                                        >{{ $tag->name }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </div>
@@ -157,10 +164,10 @@
     </div>
     <script type="text/javascript">
         function Onload() {
-            $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML',function () {
-                MathJax.Hub.Config({tex2Jax:{inlineMath:[['$','$'],['\\C','\\)']]}})
+            $.getScript('http://cdn.staticfile.org/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML', function () {
+                MathJax.Hub.Config({tex2Jax: {inlineMath: [['$', '$'], ['\\C', '\\)']]}})
                 var article_content = $('.article-content')[0];
-                MathJax.Hub.Queue(['Typeset',MathJax.Hub,article_content]);
+                MathJax.Hub.Queue(['Typeset', MathJax.Hub, article_content]);
                 $("#loading_math").slideUp(1500);
             })
 
@@ -190,11 +197,11 @@
         else
             window.onload = Onload;
 
-        function createReadingBar(){
+        function createReadingBar() {
             //文章阅读进度条
             var content_offtop = $('.article-content').offset().top
             var content_height = $('.article-content').innerHeight()
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > content_offtop) {
                     //滑动到内容部分
                     if ($(this).scrollTop() - content_offtop <= content_height) {
@@ -213,6 +220,7 @@
                 $('.reading-bar').css('width', this.reading_p + '%')
             })
         }
+
         function createIndex() {
             /* 文章目录 */
             var h = 0
@@ -221,7 +229,7 @@
             $('#article-index').html('')
             var count_in, count_ar, count_sc, count_e
             var count_ti = (count_in = count_ar = count_sc = count_e = 1)
-            var offset = new Array()
+            var offset = []
             var min = 0
             var c = 0
             var icon = ''
@@ -349,8 +357,9 @@
             }
             /* 文章目录 */
         }
+
         @if(request()->header('X-PJAX'))
-            Onload()
+        Onload()
         @endif
     </script>
 @endsection

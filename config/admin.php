@@ -418,7 +418,7 @@ return [
         ],
         'login-captcha' => [
             // set to false if you want to disable this extension
-            'enable' => false,
+            'enable' => true,
         ],
         'media-manager' => [
 
@@ -458,4 +458,8 @@ return [
             //table action links [view edit] and create button ,and any thing has class pupop : <a class="pupop" popw="400px" poph="200px" href="someurl">mylink</a>
         ]
     ],
+    'sortableColumn' => [
+        // set to false if you want to disable this extension
+        'enable' => true,
+    ]
 ];
