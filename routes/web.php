@@ -18,6 +18,6 @@ Route::get('tag/{id}','TagController@get')->name('tag')->middleware('pjax');
 Route::group(['prefix' => 'backend'], function () {
     Route::any('upload_image','Backend\UploadController@uploadImage');
 });
-Route::get('php_info',function(){
-   return phpinfo();
-});
+//Route::get('php_info',function(){
+//   return phpinfo();
+//});
