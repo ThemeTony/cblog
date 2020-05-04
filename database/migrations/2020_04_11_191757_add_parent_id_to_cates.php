@@ -15,7 +15,7 @@ class AddParentIdToCates extends Migration
     {
         Schema::table('cates', function (Blueprint $table) {
             //
-            $table->bigInteger('parent_id')->default(0);
+            $table->bigInteger('parent_id')->default(0)->unsigned();
         });
     }
 

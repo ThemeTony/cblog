@@ -18,7 +18,7 @@ class CreateNavsTable extends Migration
             $table->char('name',50);
             $table->char('link',200)->nullable();
             $table->integer('sort')->default(0);
-            $table->bigInteger('parent_id')->default(0);
+            $table->bigInteger('parent_id')->default(0)->unsigned();
         });
     }
 
