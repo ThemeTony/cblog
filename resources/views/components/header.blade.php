@@ -4,7 +4,7 @@
             <div class="header-div1-1">
                 <a href="/" class="nuxt-link-exact-active nuxt-link-active" style="display: inline-block;">
                     <img
-                        src="https://file.moetu.org/images/2020/03/20/k5NQhBId6H1D9tT71a9bbd12b762d30.jpg">
+                        src="{{config('cblog.avatar')}}">
                 </a>
 {{--                <a>--}}
 {{--                    <button type="button" class="btn btn-light">Search</button>--}}
@@ -29,60 +29,7 @@
                             </div>
                         @endempty
                     @endforeach
-
-
-
-
-                    <div class="dropdown-menu" style="">
-                        <div class="dropdown dropleft dropdown-submenu">
-                            <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
-
-                            <div class="dropdown-menu">
-                                <button class="dropdown-item" type="button">Sub action</button>
-
-                                <div class="dropdown dropright dropdown-submenu">
-                                    <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
-
-                                    <div class="dropdown-menu">
-                                        <button class="dropdown-item" type="button">Sub action</button>
-                                        <button class="dropdown-item" type="button">Another sub action</button>
-                                        <button class="dropdown-item" type="button">Something else here</button>
-                                    </div>
-                                </div>
-
-                                <button class="dropdown-item" type="button">Something else here</button>
-                                <button class="dropdown-item" type="button" disabled="">Disabled action</button>
-
-                                <div class="dropdown dropright dropdown-submenu">
-                                    <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
-
-                                    <div class="dropdown-menu">
-                                        <button class="dropdown-item" type="button">Sub action</button>
-                                        <button class="dropdown-item" type="button">Another sub action</button>
-                                        <button class="dropdown-item" type="button">Something else here</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="dropdown-header">Dropdown header</div>
-
-                        <div class="dropdown dropright dropdown-submenu">
-                            <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
-
-                            <div class="dropdown-menu">
-                                <button class="dropdown-item" type="button">Sub action</button>
-                                <button class="dropdown-item" type="button">Another sub action</button>
-                                <button class="dropdown-item" type="button">Something else here</button>
-                            </div>
-                        </div>
-
-                        <button class="dropdown-item" type="button">Something else here</button>
-                        <div class="dropdown-divider"></div>
-                        <button class="dropdown-item" type="button">Separated link</button>
-
-                    </div>
-
+                </div>
             </div> <!----> <!---->
         </header>
 {{--            <div id="view-div" class="center-info" style="display: none;">--}}

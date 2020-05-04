@@ -1,0 +1,8 @@
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.history
+/Config.php
+.DS_Store
+/vendor

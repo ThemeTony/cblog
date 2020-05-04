@@ -6,9 +6,9 @@
             <div id="grid-cell" class="grid-cell">
                 <div id="header_info" class="index-top">
                     <nav class="header-nav reveal">
-                        <img src="https://file.moetu.org/images/2020/03/20/k5NQhBId6H1D9tT71a9bbd12b762d30.jpg" class="header-avatar-top"/>
-                        <a href="" title="TonyHe" class="header-logo" style="text-decoration:none;">MatrixCoder</a>
-                        <p class="lead" style="margin-top: 0px;margin-left:5px">An Poor Programmer and Student</p>
+                        <img src="{{config('cblog.avatar')}}" class="header-avatar-top"/>
+                        <a href="" title="TonyHe" class="header-logo" style="text-decoration:none;">{{config('cblog.your_name')}}</a>
+                        <p class="lead" style="margin-top: 0px;margin-left:5px">{{config('cblog.description')}}</p>
                     </nav>
                     @include('components.topInsideCate')
                     @include('components.allTags')

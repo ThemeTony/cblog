@@ -16,5 +16,5 @@ Route::group([
     $router->resource('/cates', CateController::class);
     $router->resource('/tags', TagController::class);
     $router->resource('/navs', NavController::class);
-    $router->resource('/nav_cate', NavCateController::class);
+    $router->resource('/nav_cates', NavCateController::class);
 });

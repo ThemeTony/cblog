@@ -48,5 +48,4 @@ $(".go-top-button").click(function (event) {
     $('html,body').animate({scrollTop: 0}, 500);
     return false;
 });
-$("#loading").fadeOut(1200)
 $('[data-submenu]').submenupicker();

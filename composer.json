@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2",
         "ext-json": "*",
+        "algolia/algoliasearch-client-php": "^2.2",
         "encore/laravel-admin": "^1.7",
         "erusev/parsedown": "^1.7",
         "fideloper/proxy": "^4.0",
@@ -21,6 +22,7 @@
         "laravel-admin-ext/media-manager": "^1.1",
         "laravel-admin-ext/simplemde": "^1.0",
         "laravel/framework": "^6.2",
+        "laravel/scout": "^8.0",
         "laravel/tinker": "^2.0",
         "sharemant/laravel-admin-ext-editormd": "^1.0",
         "spatie/laravel-pjax": "^2.1"

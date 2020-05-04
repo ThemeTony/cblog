@@ -15,11 +15,13 @@
                         </div>
                         <ul id="article-index" class="index-ul"></ul>
                     </div>
+                    @if(config('cblog.math_tex'))
                     <div class="index-div-next" id="loading_math">
                         <p>
                             <span aria-hidden="true" class="spinner-grow text-secondary"><!----></span>数学公式加载中
                         </p>
                     </div>
+                    @endif
                     <div>
                         @if($prev_article)
                             <div
@@ -152,7 +154,7 @@
                     </div>
                 </article>
                 <article class="article reveal"><!-- 文章评论 -->
-                    <div id="vcomments">
+                    <div id="ArtalkComments">
                         <span aria-hidden="true" class="spinner-grow text-secondary"><!----></span>
                         评论系统加载中
                     </div>
@@ -164,27 +166,36 @@
     </div>
     <script type="text/javascript">
         function Onload() {
-            $.getScript('http://cdn.staticfile.org/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML', function () {
-                MathJax.Hub.Config({tex2Jax: {inlineMath: [['$', '$'], ['\\C', '\\)']]}})
-                var article_content = $('.article-content')[0];
-                MathJax.Hub.Queue(['Typeset', MathJax.Hub, article_content]);
-                $("#loading_math").slideUp(1500);
-            })
-
+            @if(config('cblog.math_tex'))
+                $.getScript('http://cdn.staticfile.org/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML', function () {
+                    MathJax.Hub.Config({tex2Jax: {inlineMath: [['$', '$'], ['\\C', '\\)']]}})
+                    var article_content = $('.article-content')[0];
+                    MathJax.Hub.Queue(['Typeset', MathJax.Hub, article_content]);
+                    $("#loading_math").slideUp(1500);
+                })
+            @endif
+            @if(config('cblog.prism'))
             var element = document.createElement("script");
             element.src = "/js/prism.js";
             document.body.appendChild(element);
+            @endif
 
-            $.getScript("//unpkg.com/valine/dist/Valine.min.js", function () {
-                new Valine({
-                    el: '#vcomments',
-                    appId: '{{env('VALINE_ID')}}',
-                    appKey: '{{env("VALINE_KEY")}}',
-                    recordIP: true,
-                    meta: ['nick', 'mail'],
-                    mathJax: true,
-                })
+            $.getScript('https://artalk.js.org/dist/Artalk.js',function () {
+                new Artalk({
+                    el: '#ArtalkComments',
+                    placeholder: '{{config("cblog.comment.placeholder")}}',
+                    noComment: '{{config("cblog.comment.noComment")}}',
+                    defaultAvatar: '{{config("cblog.comment.defaultAvatar")}}',
+                    pageKey: {{config("cblog.comment.pageKey")}},
+                    serverUrl: '{{config("cblog.comment.serverUrl")}}',
+                    sendBtn : '{{config("cblog.comment.sendBtn")}}',
+                    readMore: {
+                        pageSize: {{config("cblog.comment.readMore.pageSize")}},
+                        autoLoad: {{config("cblog.comment.readMore.autoLoad")}}
+                    }
+                });
             })
+
 
             createIndex()
             createReadingBar()

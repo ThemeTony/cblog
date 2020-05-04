@@ -1,0 +1,1 @@
+{"last_id":13,"schema":{"id":"integer","content":"string","nick":"string","email":"string","link":"string","ua":"string","page_key":"string","rid":"integer","ip":"string","date":"string","is_collapsed":"boolean"},"relations":{}}
