@@ -8,6 +8,8 @@ return [
     'math_tex'=>true,
     'prism'=>true,
     'registration'=>null,
+    'algolia_id'=>env('ALGOLIA_APP_ID'),
+    'algolia_only_search_key'=>env('ALGOLIA_ONLY_SEARCH_KEY'),
     'comment'=>[
         'placeholder'=>"来啊，快活啊 ( ゜- ゜)",
         'noComment'=>'快来成为第一个评论的人吧~',

@@ -30,5 +30,11 @@ class Article extends Model
         $this->increment('views');
         $this->timestamps=true;
     }
-    //
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+        $array['rendered']=strip_tags($this->attributes['rendered']);
+        $array['url']=route('article',['id'=>$array['id']]);
+        return $array;
+    }
 }

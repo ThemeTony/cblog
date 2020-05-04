@@ -19324,7 +19324,6 @@ $(".go-top-button").click(function (event) {
   }, 500);
   return false;
 });
-$("#loading").fadeOut(1200);
 $('[data-submenu]').submenupicker();
 
 /***/ }),

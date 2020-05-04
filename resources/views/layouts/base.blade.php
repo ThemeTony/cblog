@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>@yield('title','Hello') - {{config('cblog.website_name')}}</title>
-        <link href="/css/app.css" rel="stylesheet">
         <link href="http://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://cdn.staticfile.org/bootstrap-submenu/3.0.1/css/bootstrap-submenu.min.css" rel="stylesheet">
         <link href="http://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
         <link href="https://artalk.js.org/dist/Artalk.css" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
     </head>
     <body>
         <script src="http://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
