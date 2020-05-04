@@ -14,7 +14,7 @@ class AddCateToArticlesTable extends Migration
     public function up()
     {
         Schema::table('articles', function (Blueprint $table) {
-            $table->bigInteger('cate_id');
+            $table->bigInteger('cate_id')->nullable();
             $table->foreign('cate_id')->references('id')->on('cates')->onDelete('cascade');
             //
         });

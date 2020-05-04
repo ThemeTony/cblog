@@ -9,10 +9,22 @@
         <a href="#">已了解</a>
     </li>
     @foreach($articles as $article)
-        <li class="article-list-item reveal index-post-list @if($article->sticky)
+        <li class="article-list-item reveal index-post-list
+            @if($article->sticky)
             sticky-one
             @endif">
-            @if(empty($article->image)||ctype_space($article->image))
+
+            @if($article->kind==1)
+                <h3 class="article-list-content article-status">{{$article->title}}</h3>
+                <div class="article-list-footer">
+                    <span class="article-list-date">{{ $article->created_at->diffForHumans() }} </span>
+                    <span class="article-list-divider">-</span>
+                    <span class="article-list-minutes">
+                        <i class="ri-contrast-2-line"></i>
+                        状态 | {!! $article->rendered !!}
+                    </span>
+                </div>
+            @elseif(empty($article->image)||ctype_space($article->image))
 
                 <div class="list-show-div"><!---->
                     @if($article->sticky)

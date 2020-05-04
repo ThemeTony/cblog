@@ -99,6 +99,7 @@ class ArticleController extends AdminController
             'off' => ['value' => false, 'text' => '关闭', 'color' => 'danger'],
         ];
         $form->switch('sticky',__('顶置'))->states($states);
+        $form->select('kind',__('类型'))->options([0=>'普通',1=>'状态']);
         $form->display('views',__('阅读量'));
         $form->datetime('created_at', __('创建时间'));
         $form->datetime('updated_at',__('修改时间'));

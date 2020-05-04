@@ -15,9 +15,13 @@ class Article extends Model
     }
     public function setContentAttribute($value)
     {
-        $this->attributes['content']=$value;
-        $parsedown=new \ParsedownMath();
-        $this->attributes['rendered'] = $parsedown->enableMath()->text($value);
+        if($this->attributes['kind']==0) {
+            $this->attributes['content'] = $value;
+            $parsedown = new \ParsedownMath();
+            $this->attributes['rendered'] = $parsedown->enableMath()->text($value);
+        }else{
+            $this->attributes['rendered']=$this->attributes['content'];
+        }
     }
     public function addViews(){
         $this->timestamps=false;

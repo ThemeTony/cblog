@@ -11,7 +11,7 @@ class CateController extends Controller
     //
     public function get($id){
         $cate=Cate::findOrFail($id);
-        $articles=Article::where('cate_id',$id)->with(['tags'])->orderBy('sticky','desc')->orderBy('id','desc')->select(['id','title','rendered','created_at','cate_id','sticky','views','image'])->paginate(10);
+        $articles=Article::where('cate_id',$id)->with(['tags'])->orderBy('sticky','desc')->orderBy('id','desc')->select(['id','title','rendered','created_at','cate_id','sticky','views','image','kind'])->paginate(10);
         return view('cate',['cate'=>$cate,'articles'=>$articles]);
     }
 }
