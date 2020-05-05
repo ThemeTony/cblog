@@ -14,14 +14,15 @@
     @endif
 <div class="footer reveal">
     <p>
-        Copyright &copy; 2020-{{ date("Y") }} · {{config('cblog.your_name')}} ·
+        Copyright &copy; 2020-{{ date("Y") }} · {{config('cblog.your_name')}}
         @if(config('cblog.registration'))
         <a
           href="http://www.beian.miit.gov.cn"
           target="_blank"
           style="text-decoration: none;color: inherit;font-size: 14px;font-weight: 500;"
-        >{{config('cblog.registration')}}</a> ·
+        >{{config('cblog.registration')}}</a>
         @endif
+         · Made by <a href="https://github.com/ThemeTony" target="_blank">ThemeTony Team</a> ·
         <a
             href="https://creativecommons.org/licenses/by-nc/4.0/"
             target="_blank"
