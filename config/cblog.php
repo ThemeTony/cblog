@@ -7,7 +7,7 @@ return [
     'your_name'=>'MatrixCoder',
     'math_tex'=>true,
     'prism'=>true,
-    'registration'=>null,
+    'registration'=>'123',
     'algolia_id'=>env('ALGOLIA_APP_ID'),
     'algolia_only_search_key'=>env('ALGOLIA_ONLY_SEARCH_KEY'),
     'comment'=>[

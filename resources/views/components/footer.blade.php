@@ -20,7 +20,7 @@
           href="http://www.beian.miit.gov.cn"
           target="_blank"
           style="text-decoration: none;color: inherit;font-size: 14px;font-weight: 500;"
-        >{{config('cblog.registration')}}</a>
+        > · {{config('cblog.registration')}}</a>
         @endif
          · Made by <a href="https://github.com/ThemeTony" target="_blank">ThemeTony Team</a> ·
         <a
