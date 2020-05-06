@@ -20,7 +20,7 @@ https://github.com/ThemeTony <br/>
 - Nprogress 加载进度条
 - Laravel-admin 强大的后台管理系统
 - Artalk 评论系统 
-- Bootstarap 制作的简洁但优雅的界面
+- Bootstrap 制作的简洁但优雅的界面
 - 无限级分类支持
 ### 要求
 - PHP >= 7.2.5
