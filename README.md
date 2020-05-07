@@ -1,6 +1,12 @@
 <div align="center">
   <h1>Cblog</h1>
   <p>一个使用PHP Laravel框架的简洁强大的博客</p>
+  <img alt="GitHub license" src="https://badgen.net/github/license/ThemeTony/cblog">
+  <img alt="Github release stable" src="https://badgen.net/github/release/ThemeTony/cblog/stable">
+  <img alt="Github last commit" src="https://badgen.net/github/last-commit/ThemeTony/cblog">
+  <img alt="Github stars" src="https://badgen.net/github/stars/ThemeTony/cblog">
+  <img alt="Github forks" src="https://badgen.net/github/forks/ThemeTony/cblog">
+  
 </div>
 
 #### 关联项目
