@@ -78,7 +78,7 @@
     </div>
 </div>
 <script>
-    $.getScript('http://cdn.staticfile.org/algoliasearch/4.2.0/algoliasearch-lite.umd.js',function () {
+    $.getScript('//cdn.staticfile.org/algoliasearch/4.2.0/algoliasearch-lite.umd.js',function () {
         const client = algoliasearch('{{config("cblog.algolia_id")}}','{{config("cblog.algolia_only_search_key")}}');
         index = client.initIndex('articles');
     })

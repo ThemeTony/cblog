@@ -32,7 +32,7 @@
     <script type="text/javascript">
         function Onload() {
             @if(config('cblog.math_tex'))
-            $.getScript('http://cdn.staticfile.org/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML',function () {
+            $.getScript('//cdn.staticfile.org/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML',function () {
                 MathJax.Hub.Config({tex2Jax:{inlineMath:[['$','$'],['\\C','\\)']]}})
                 var article_content = $('.article-content')[0];
                 MathJax.Hub.Queue(['Typeset',MathJax.Hub,article_content]);
@@ -46,7 +46,7 @@
             document.body.appendChild(element);
             @endif
 
-            $.getScript('https://artalk.js.org/dist/Artalk.js',function () {
+            $.getScript('//artalk.js.org/dist/Artalk.js',function () {
                 new Artalk({
                     el: '#ArtalkComments',
                     placeholder: '{{config("cblog.comment.placeholder")}}',

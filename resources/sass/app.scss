@@ -4,9 +4,9 @@
     author: TonyHe
     update: 16-2-2020
 */
+@import "nav";
 @media (prefers-color-scheme: dark) {
     @import "style_dark";
 }
 @import "style_light";
-@import "nav";
 @import "remixicon";

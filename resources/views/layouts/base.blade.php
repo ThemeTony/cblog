@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>@yield('title','Hello') - {{config('cblog.website_name')}}</title>
-        <link href="http://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://cdn.staticfile.org/bootstrap-submenu/3.0.1/css/bootstrap-submenu.min.css" rel="stylesheet">
-        <link href="http://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-        <link href="https://artalk.js.org/dist/Artalk.css" rel="stylesheet">
+        <link href="//cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//cdn.staticfile.org/bootstrap-submenu/3.0.1/css/bootstrap-submenu.min.css" rel="stylesheet">
+        <link href="//cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+        <link href="//artalk.js.org/dist/Artalk.css" rel="stylesheet">
         <link href="/css/app.css" rel="stylesheet">
     </head>
     <body>
-        <script src="http://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+        <script src="//cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
         <script>
             function setCookie(name,value,time,path)
             {
@@ -60,16 +60,16 @@
             @section('main')@show
         </div>
         @include('components.footer')
-        <script src="http://cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
-        <script src="http://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js"></script>
+        <script src="//cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+        <script src="//cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js"></script>
         <script>
             $(document).pjax('a', '#main',{'timeout':5000});
             $(document).on('pjax:start', function() { NProgress.start(); });
             $(document).on('pjax:end',   function() { NProgress.done();  });
         </script>
-        <script src="http://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js"></script>
-        <script src='http://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js'></script>
-        <script src="http://cdn.staticfile.org/bootstrap-submenu/3.0.1/js/bootstrap-submenu.min.js"></script>
+        <script src="//cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src='//cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js'></script>
+        <script src="//cdn.staticfile.org/bootstrap-submenu/3.0.1/js/bootstrap-submenu.min.js"></script>
         <script src="/js/app.js"></script>
     </body>
 </html>

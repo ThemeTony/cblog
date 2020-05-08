@@ -33,15 +33,22 @@
                             顶置
                         </em>
                     @endif
-                    @if($article->cate)
-                        <div class="article-list-tags"><a href="{{route('cate',['id'=>$article->cate->id])}}"
-                                                          class="list-normal-tag"
-                                                          style="color: rgba(255, 152, 0, 0.83) !important;">{{$article->cate->name}}</a></div>
-                    @endif
-                    @foreach($article->tags as $tag)
-                        <a style="margin-left: 5px;"
-                           href="{{route('tag',['id'=>$tag->id])}}">{{ $tag->name }}</a>
-                    @endforeach
+
+                        <div class="article-list-tags">
+                            @if($article->cate)
+                                <a href="{{route('cate',['id'=>$article->cate->id])}}"
+                                                              class="list-normal-tag"
+                                                              style="color: rgba(255, 152, 0, 0.83) !important;">{{$article->cate->name}}</a>
+                            @else
+                                <a
+                                   class="list-normal-tag"
+                                   style="color: rgba(255, 152, 0, 0.83) !important;">无分类</a>
+                            @endif
+                            @foreach($article->tags as $tag)
+                                <a style="margin-left: 5px;"
+                                   href="{{route('tag',['id'=>$tag->id])}}">{{ $tag->name }}</a>
+                            @endforeach
+                        </div>
                 </div>
                 <div>
                     <a class=""><a style="text-decoration: none;" href="{{route('article',['id'=>$article->id])}}">

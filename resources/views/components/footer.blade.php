@@ -17,7 +17,7 @@
         Copyright &copy; 2020-{{ date("Y") }} · {{config('cblog.your_name')}}
         @if(config('cblog.registration'))
         <a
-          href="http://www.beian.miit.gov.cn"
+          href="//www.beian.miit.gov.cn"
           target="_blank"
           style="text-decoration: none;color: inherit;font-size: 14px;font-weight: 500;"
         > · {{config('cblog.registration')}}</a>
