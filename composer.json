@@ -24,6 +24,7 @@
         "laravel/framework": "^6.2",
         "laravel/scout": "^8.0",
         "laravel/tinker": "^2.0",
+        "namet/laravel-admin-tagsinput": "^0.2.1",
         "sharemant/laravel-admin-ext-editormd": "^1.0",
         "spatie/laravel-pjax": "^2.1"
     },

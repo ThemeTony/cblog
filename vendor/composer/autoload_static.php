@@ -104,6 +104,7 @@ class ComposerStaticInit61e144ef1de64f020e6aeebec49a56ae
         'N' => 
         array (
             'NunoMaduro\\Collision\\' => 21,
+            'Namet\\Tagsinput\\' => 16,
         ),
         'M' => 
         array (
@@ -367,6 +368,10 @@ class ComposerStaticInit61e144ef1de64f020e6aeebec49a56ae
         'NunoMaduro\\Collision\\' => 
         array (
             0 => __DIR__ . '/..' . '/nunomaduro/collision/src',
+        ),
+        'Namet\\Tagsinput\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/namet/laravel-admin-tagsinput/src',
         ),
         'Monolog\\' => 
         array (
@@ -3870,6 +3875,9 @@ class ComposerStaticInit61e144ef1de64f020e6aeebec49a56ae
         'Monolog\\SignalHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/SignalHandler.php',
         'Monolog\\Test\\TestCase' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Test/TestCase.php',
         'Monolog\\Utils' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Utils.php',
+        'Namet\\Tagsinput\\Tagsinput' => __DIR__ . '/..' . '/namet/laravel-admin-tagsinput/src/Tagsinput.php',
+        'Namet\\Tagsinput\\TagsinputExtension' => __DIR__ . '/..' . '/namet/laravel-admin-tagsinput/src/TagsinputExtension.php',
+        'Namet\\Tagsinput\\TagsinputServiceProvider' => __DIR__ . '/..' . '/namet/laravel-admin-tagsinput/src/TagsinputServiceProvider.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/CollisionServiceProvider.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\Inspector' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/Inspector.php',
