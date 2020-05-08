@@ -59,17 +59,6 @@ php artisan admin:install //如有报错，请直接忽视
 给您的网站用户读写`./storage`的权限，这个目录是用来储存session、图片等文件的<br>
 做完以上步骤，您不出意外就可以跑起来了<br><br>
 您还需要设置评论板，依赖于[Artalk](https://github.com/qwqcode/Artalk)
-```
-cd ArtalkServerPhp
-php -r "copy('Config.example.php', 'Config.php');"
-```
-然后，你需要设置`Config.php`，按照注释填写，
-```
-// 确保当前在 ArtalkServerPhp 目录
-composer install 
-```
-，新建网站`ArtalkPhpServer/public`，给您的网站用户读写`ArtalkPhpServer/data`的权限，这个用来存放评论数据
-
 具体可见[Artalk-API-PHP](https://github.com/qwqcode/Artalk-API-PHP)
 
 之后，请更改`config/cblog.php`，按注释填写
