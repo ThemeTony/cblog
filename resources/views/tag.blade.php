@@ -24,6 +24,7 @@
                         </div>
                         <p class="top2 lead archive-p">文章总数:{{ $articles->total() }}</p>
                     </nav>
+                    @include('components.allTags')
                 </div>
                 @component('components.article_list',['articles'=>$articles])
                 @endcomponent

@@ -25,9 +25,7 @@
                         <p class="top2 lead archive-p">{{ $cate->description }}</p>
                         <p class="top2 lead archive-p">文章总数:{{ $articles->total() }}</p>
                     </nav>
-                    <!-- 顶部标题与分类区块 -->
-
-                    <!-- 顶部标题与分类区块 -->
+                    @include('components.topInsideCate')
                 </div>
                 @component('components.article_list',['articles'=>$articles])
                 @endcomponent

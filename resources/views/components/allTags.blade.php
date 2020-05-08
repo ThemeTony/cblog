@@ -6,7 +6,7 @@
 {{--    <!-- 滑动左侧 -->--}}
 
     <ul class="post_tags post_tags_noscroll">
-        @foreach($tags as $tag)
+        @foreach(\App\Tag::all() as $tag)
         <li class="cat-real">
             <a href="{{route('tag',['id'=>$tag->id])}}"># {{$tag->name}}</a>
         </li>
