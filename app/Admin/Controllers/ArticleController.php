@@ -34,12 +34,18 @@ class ArticleController extends AdminController
         $grid->column('cate.name', '分类')->label('warning');
         $grid->column('tags',__('标签'))->display(function ($tags) {
             $tags = array_map(function ($tags) {
-                return "<span class='label label-success'>{$tags['name']}</span>";
+                return "<a href='".route('tag',['id'=>$tags['id']])."'><span class='label label-success'>{$tags['name']}</span></a>";
             }, $tags);
 
             return join('&nbsp;', $tags);
         });
         $grid->column('sticky',__('顶置'))->bool();
+        $grid->column('kind',__('标签'))->display(function ($kind) {
+            if($kind==0)
+                $kind="<span class='label label-info'>普通</span>";
+            else $kind="<span class='label label-danger'>状态</span>";
+            return $kind;
+        });
         $grid->column('views',__('阅读量'));
         $grid->column('created_at', __('创建时间'));
         $grid->column('updated_at', __('修改时间'));
