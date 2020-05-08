@@ -55,8 +55,8 @@
                         <ul id="search-list">
 
                             <li id="search-none">
-                                <h4 style="color:#777"></h4>
-                                <p></p>
+                                <h4 style="color:#777">无匹配文章</h4>
+                                <p>请尝试更换搜索词再试试吧...</p>
                             </li>
                         </ul>
                         <ul id="search-loading" style="display: none">
