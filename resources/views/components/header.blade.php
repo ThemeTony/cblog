@@ -85,6 +85,7 @@
     let timer,last="";
     $("#search-btn").click(function () {
         $(".search_form_play").show(150);
+        $('#search-none').hide()
         timer = setInterval(search, 2000);
     });
     $('#closeSearch').click(function () {
