@@ -168,7 +168,12 @@
         function Onload() {
             @if(config('cblog.math_tex'))
                 $.getScript('//cdn.staticfile.org/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML', function () {
-                    MathJax.Hub.Config({tex2Jax: {inlineMath: [['$', '$'], ['\\C', '\\)']]}})
+                    MathJax.Hub.Config({
+                        tex2jax: {
+                            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                            displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                        }
+                    });
                     var article_content = $('.article-content')[0];
                     MathJax.Hub.Queue(['Typeset', MathJax.Hub, article_content]);
                     $("#loading_math").slideUp(1500);

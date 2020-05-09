@@ -37,4 +37,9 @@ class Article extends Model
         $array['url']=route('article',['id'=>$array['id']]);
         return $array;
     }
+    public function shouldBeSearchable()
+    {
+        if($this->kind==0) return true;
+        else return false;
+    }
 }
