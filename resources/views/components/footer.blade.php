@@ -1,6 +1,6 @@
 <div>
     <button type="button" aria-label="go to top of page"
-            class="goup-container footer-goup go-top-button" style="display: none;">
+            class="goup-container footer-goup go-top-button" style="display: none;outline: none;">
         <i class="ri-arrow-up-s-fill footer-goup-icon"></i>
     </button>
     @if(config('cblog.github'))
